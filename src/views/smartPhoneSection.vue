@@ -12,7 +12,9 @@
 </template>
 
 <script>
-// import axios from "axios";
+/**
+ * @vue-prop {object} categories - Dummy API data
+ */
 import categoryBox from "../components/categoryBox.vue";
 export default {
   props: ["categories"],

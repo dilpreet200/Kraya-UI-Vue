@@ -28,7 +28,7 @@
           <i class="fa fa-minus" aria-hidden="true"></i>
         </button>
       </td>
-      <td>${{(product.quantity*product.price)}}</td>
+      <td>${{ product.quantity * product.price }}</td>
     </tr>
   </table>
 </template>

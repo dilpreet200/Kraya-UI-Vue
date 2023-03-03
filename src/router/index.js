@@ -38,13 +38,17 @@ const routes = [
     name: 'Cart',
     component: () => import('../views/cartPage.vue')
   },
-  //comparion page
-  // {
-  //   path: '/compareProoducts',
-  //   name: 'CompareProoducts',
-  //   component: () => import('../views/product/compareProduct.vue')
-  // },
-
+  // authentication page
+  {
+    path: '/loginPage',
+    name: 'LoginPage',
+    component: () => import('../views/loginPage.vue')
+  },
+  {
+    path: '/signupPage',
+    name: 'SignupPage',
+    component: () => import('../views/signupPage.vue')
+  },
 ]
 
 const router = createRouter({

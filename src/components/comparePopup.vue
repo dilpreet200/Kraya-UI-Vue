@@ -10,10 +10,14 @@
       <v-card-text>
         <v-container class="Popup">
           <v-col v-for="item in compareArrayItems" :key="item.id">
-            <img class="popup__product__image"  :src="item.images[0]" alt="product image" />
-            <h1>{{ item.title }}</h1>
-            <span>${{ item.price }}</span>
-            <p>{{ item.description }}</p>
+            <img
+              class="popup__product__image"
+              :src="item.images[0]"
+              alt="product image"
+            />
+            <h1 class="popup__product__heading">{{ item.title }}</h1>
+            <span class="popup__product__price">${{ item.price }}</span>
+            <p class="popup__product__description">{{ item.description }}</p>
           </v-col>
         </v-container>
       </v-card-text>
@@ -43,6 +47,15 @@ export default {
   display: flex;
 }
 .popup__product__image {
-    height: 100px;
+  height: 100px;
+}
+.popup__product__heading {
+  padding: 1em;
+  padding-left: 0;
+}
+.popup__product__price {
+  display: block;
+  padding-bottom: 1em;
+  padding-left: 0;
 }
 </style>

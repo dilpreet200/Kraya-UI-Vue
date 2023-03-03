@@ -10,12 +10,15 @@
             class="fa fa-shopping-bag pd-left"
             aria-hidden="true"
           ></i
-          ><span class="cart-count">{{cartCount}}</span></a
+          ><span class="cart-count">{{ cartCount }}</span></a
         >
-        <a class="sub_header_links" href="#"
-          ><i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;DILPREET
-          SINGH&nbsp;<i class="fa fa-angle-down pd-left" aria-hidden="true"></i
-        ></a>
+        <!-- <a class="sub_header_links" href="#"
+          ><i class="fa fa-user-o" aria-hidden="true"></i>&nbsp; ACCOUNT &nbsp;<i
+            class="fa fa-angle-down pd-left"
+            aria-hidden="true"
+          ></i>
+        </a> -->
+        <navDropdown />
       </div>
     </section>
     <section class="navigation_header">
@@ -34,13 +37,17 @@
 </template>
 
 <script>
+import navDropdown from "../components/navDropdown.vue";
 export default {
+  components: {
+    navDropdown
+  },
   computed: {
     cartCount() {
       let cart = this.$store.getters.cartItems;
-      let count =0;
+      let count = 0;
       for (const items of cart) {
-        count += items.quantity
+        count += items.quantity;
       }
       return count;
     },
